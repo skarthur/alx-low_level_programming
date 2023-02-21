@@ -6,3 +6,4 @@
 
 2. Prints **_10 times_** the alphabet, in lowercase, followed by a new line.
 
+3. Checks for **lowercase** character.
