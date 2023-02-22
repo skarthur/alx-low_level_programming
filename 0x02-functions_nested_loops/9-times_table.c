@@ -9,13 +9,17 @@ void times_table(void)
 {
 	int num, digit, x;
 
-	for (num = 0; num <= 9; num++)
+	num = 0;
+
+	while (num <= 9)
 	{
 		_putchar('0');
 		_putchar(',');
 		_putchar(' ');
 
-		for (digit = 0; digit <= 9; digit++)
+		digit = 0;
+
+		while (digit = 1)
 		{
 			x = (num * digit);
 
@@ -34,7 +38,9 @@ void times_table(void)
 				_putchar(' ');
 
 			}
+			digit++;
 		}
+		num++;
 
 		_putchar('\n');
 	}
