@@ -17,7 +17,10 @@ int main(void)
 		sum = f1 + f2;
 		printf("%lu", sum);
 		if (count < 97)
-			printf(", ");
+		{
+			puts(',');
+			puts(' ');
+		}
 
 		f1 = f2;
 		f2 = sum;
