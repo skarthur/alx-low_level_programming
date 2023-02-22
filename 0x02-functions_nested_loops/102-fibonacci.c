@@ -8,13 +8,13 @@
 
 int main(void)
 {
-	int f1 = 0, f2 = 1, sum;
+	unsigned long f1 = 0, f2 = 1, sum;
 	int i = 0;
 
 	while (i < 50)
 	{
 		sum = f1 + f2;
-		printf("%d", sum);
+		printf("%lu", sum);
 
 		f1 = f2;
 		f2 = sum;
