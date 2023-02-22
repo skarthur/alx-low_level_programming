@@ -25,7 +25,7 @@ void times_table(void)
 
 			if ((x / 10) > 0)
 			{
-				_putchar((d / 10) + '0');
+				_putchar((x / 10) + '0');
 			}
 			else
 			{
