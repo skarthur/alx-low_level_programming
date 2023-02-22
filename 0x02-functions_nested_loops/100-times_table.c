@@ -31,7 +31,7 @@ void print_times_table(int n)
 			_putchar(y + '0');
 			num++;
 		}
-		n++;
+		x++;
 
 		_putchar('\n');
 	}
