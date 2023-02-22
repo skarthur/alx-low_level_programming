@@ -18,7 +18,6 @@ int main(void)
 		if (count == 97)
 		{
 			printf("%lu", sum);
-			break;
 		}
 		printf("%lu, ", sum);
 
