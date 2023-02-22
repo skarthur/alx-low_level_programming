@@ -11,6 +11,7 @@ int main(void)
 {
 	unsigned long f1 = 0, f2 = 1, sum;
 	int count = 0;
+	clrscr();
 
 	while (count < 98)
 	{
@@ -18,10 +19,7 @@ int main(void)
 		printf("%lu", sum);
 
 		if (count < 97)
-		{
-			_putchar(',');
-			_putchar(' ');
-		}
+			printf(", ");
 
 		f1 = f2;
 		f2 = sum;
@@ -29,6 +27,7 @@ int main(void)
 		count++;
 	}
 	printf("\n");
+	getch();
 
 	return (0);
 }
