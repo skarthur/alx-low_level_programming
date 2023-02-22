@@ -14,11 +14,11 @@ int main(void)
 
 	while (count < 98)
 	{
+		if (count == 97)
+			printf("%lu", sum);
+			break;
 		sum = f1 + f2;
-		printf("%lu", sum);
-
-		if (count < 97)
-			printf(", ");
+		printf("%lu, ", sum);
 
 		f1 = f2;
 		f2 = sum;
