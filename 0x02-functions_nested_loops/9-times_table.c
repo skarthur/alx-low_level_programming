@@ -17,9 +17,9 @@ void times_table(void)
 		_putchar(',');
 		_putchar(' ');
 
-		digit = 0;
+		digit = 1;
 
-		while (digit = 1)
+		while (digit <= 9)
 		{
 			x = (num * digit);
 
