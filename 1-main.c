@@ -11,7 +11,7 @@ int main(void)
 
 	printf("Infinite loop incoming :(\n");
 
-	i = 0;		/* i never increments so it will always be zero */
+	i = 0;
 
 	while (i < 10)	/* the condition is always going to be true */
 	{
