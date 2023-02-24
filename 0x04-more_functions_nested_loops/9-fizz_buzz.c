@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * fizz_buzz - Prints the numbers from 1 to 100, followed by a new line.
@@ -18,7 +17,7 @@ int fizz_buzz(void)
 	{
 		if (i == 100)
 			printf("buzz");
-		else if (i % 3 == 0 && i % 5 == 0)
+		else if ((i % 3 == 0) && (i % 5 == 0))
 			printf("FizzBuzz ");
 		else if (i % 3 == 0)
 			printf("Fizz ");
