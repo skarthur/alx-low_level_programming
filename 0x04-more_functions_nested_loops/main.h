@@ -23,5 +23,8 @@ void print_square(int size);
 
 int fizz_buzz(void);
 
+void print_triangle(int size);
+
+
 
 #endif /* MAIN_H */
