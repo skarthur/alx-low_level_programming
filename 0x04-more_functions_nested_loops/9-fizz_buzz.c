@@ -13,7 +13,9 @@
 int fizz_buzz(void)
 {
 	int i;
-	char f[] = "Fizz", b[] = "Buzz", fb[] = "FizzBuzz";
+	char f[] = "Fizz";
+	char b[] = "Buzz";
+	char fb[] = "FizzBuzz";
 
 	for (i = 1; i <= 100; i++)
 	{
