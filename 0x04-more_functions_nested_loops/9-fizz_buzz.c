@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * fizz_buzz - Prints the numbers from 1 to 100, followed by a new line.
+ * main - Prints the numbers from 1 to 100, followed by a new line.
  * For numbers that are:
  * - multiples of 3, print Fizz,
  * - multiples of 5, print Buzz,
@@ -10,7 +10,7 @@
  *   Return: Always 0
  */
 
-int fizz_buzz(void)
+int main(void)
 {
 	int i;
 	char f[] = "Fizz";
