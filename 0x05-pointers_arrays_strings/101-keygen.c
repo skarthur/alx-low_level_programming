@@ -14,6 +14,8 @@ int main(void)
 	int i;
 	char pass[12];
 
+	printf("Press enter to get a twelve-character password\n");
+
 	for (i = 0; i < 4; i++)
 	{
 		pass[i] = rand() % 9;
