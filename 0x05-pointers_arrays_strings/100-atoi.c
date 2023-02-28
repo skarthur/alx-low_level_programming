@@ -8,9 +8,10 @@
 
 int _atoi(char *s)
 {
-	int i, c = 0;
+	int i = 0;
 	unsigned int a = 0;
 	int b = 1;
+	int c = 0;
 
 	while (s[i])
 	{
