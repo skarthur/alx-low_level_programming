@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "main.h"
+#define LARGEST 10000000000
 
 /**
- * main - prints the first 98 Fibonacci numbers, starting 
+ * main - prints the first 98 Fibonacci numbers, starting
  * with 1 and 2, separated by a comma followed by a space
  *
  * Return: Always 0
@@ -10,52 +11,31 @@
 
 int main(void)
 {
-	unsigned long f1 = 0, f2 = 1, sum;
-	unsigned long f1_h1, f1_h2, f2_h1, f2_h2;
-	unsigned long h1, h2;
+	unsigned long int f1 = 0, h1 = 1, f2 = 0, h2 = 2;
+	unsigned long int hold1, hold2, hold3;
 
-	int count = 0;
+	int count;
 
-	while (count < 92)
+	printf("%lu, %lu, ", h1, h2);
+	for (count = 2; count < 98; count++)
 	{
-		sum = f1 + f2;
-		printf("%lu, ", sum);
-
-		f1 = f2;
-		f2 = sum;
-
-		count++;
-	}
-
-	f1_h1 = f1 / 10000000000;
-	f2_h1 = f2 / 10000000000;
-	f1_h2 = f1 % 10000000000;
-	f2_h2 = f2 % 10000000000;
-
-
-	int count = 93;
-
-	while (count < 99)
-	{
-		h1 = f1_h1 + f2_h1;
-		h2 = f1_h2 + f2_h2;
-		
-		if (f1_h2 + f2_h2 > 9999999999)
+		if (h1 + h2 > LARGEST || f2 > 0 || f1 > 0)
 		{
-			h1 += 1;
-			h2 %= 10000000000;
+			hold1 = (h1 + h2) / LARGEST;
+			hold2 = (h1 + h2) % LARGEST;
+			hold3 = f1 + f2 + hold1;
+			f1 = f2, f2 = hold3;
+			h1 = h2, h2 = hold2;
+			printf("%lu%010lu", f2, h2);
 		}
-
-		printf("%lu%lu", h1, h2);
-		if (count != 98)
+		else
+		{
+			hold2 = h1 + H2;
+			h1 = h2, h2 = hold2;
+			printf("%lu", h2);
+		}
+		if (count != 97)
 			printf(", ");
-		
-		f1_h1 = f2_h1;
-		f1_h2 = f2_h2;
-		f2_h1 = h1;
-		f2_h2 = h2;
-		
-		count++;
 	}
 	printf("\n");
 
