@@ -8,11 +8,10 @@
 
 void print_times_table(int n)
 {
-	int y, z;
+	int x = 0, y, z;
 
 	if (n > 15 || n < 0)
 		return;
-	int x = 0;
 
 	while (x <= n)
 	{
