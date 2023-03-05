@@ -30,7 +30,7 @@ int main(void)
 		}
 		else
 		{
-			hold2 = h1 + H2;
+			hold2 = h1 + h2;
 			h1 = h2, h2 = hold2;
 			printf("%lu", h2);
 		}
