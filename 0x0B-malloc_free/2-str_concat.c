@@ -27,6 +27,13 @@ char *str_concat(char *s1, char *s2)
 	if (array == NULL)
 		return (NULL);
 
+	while (*s1)
+	{
+		array[i] = *s1;
+		i++;
+		s1++;
+	}
+
 	while (*s2)
 	{
 		array[i] = *s2;
