@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -8,22 +9,19 @@
 
 int main(void)
 {
-	int n = 0;
-	int i = 1;
+	int i, j;
 
-	while (n < 9)
+	for (i = 0; i <= 8; i++)
 	{
-		while (i < 10)
+		for (j = i + 1; j <= 9; j++)
 		{
-			putchar(n + '0');
 			putchar(i + '0');
-			if (n == 8 && i == 9)
+			putchar(j + '0');
+			if (i == 8 && j == 9)
 				continue;
 			putchar(',');
 			putchar(' ');
-			i++;
 		}
-		n++;
 	}
 	putchar('\n');
 
