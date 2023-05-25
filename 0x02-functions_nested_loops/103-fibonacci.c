@@ -9,7 +9,7 @@
 int main(void)
 {
 	unsigned long f1 = 0, f2 = 1, sum;
-	float toatla_sum = 0;
+	float total_sum = 0;
 
 	while (total_sum <= 4000000)
 	{
