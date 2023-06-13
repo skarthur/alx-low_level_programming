@@ -8,27 +8,47 @@
  * @str: String to be splitted.
  * Return: a pointer to array of String.
  */
-
 char **strtow(char *str)
 {
-	char *array = NULL;
-	unsigned int i = 0, j = 0, k;
+	char **array, *ptr = str;
+	unsigned int i = 0, j = 0;
 
-	if (strncmp(str, "", 1) || str == NULL)
-		return (NULL);
-
-	array = malloc((i + j + 1) * sizeof(char));
-
-	if (array == NULL)
-		return (NULL);
-	for (k = 0; k < i; k++)
-		array[k] = str[k];
-	i = k;
-	for (k = 0; k < j; k++)
+	if (str == 0 || *str == 0)
+		return (0);
+	while (*ptr)
 	{
-		array[i] = str[k];
-		i++;
+		if (!(*ptr == ' ') && (*(ptr + 1) == ' ' || *(ptr + 1) == 0))
+			i++;
+		ptr++;
 	}
-	array[i] = '\0';
-	return (NULL);
+
+	if (i == 0)
+		return (NULL);
+	array = malloc((i + 1) * sizeof(char *));
+	if (array == 0)
+		return (0);
+	while (*str)
+	{
+		if (*str != ' ')
+		{
+			for (ptr = str, i = 0; *ptr != ' ' && *ptr != 0;)
+				i++, ptr++;
+			array[j] = malloc(i + 1);
+			if (array[j] == 0)
+			{
+				while (j >= 0)
+					free(array[--j]);
+				free(array);
+				return (0);
+			}
+			ptr = array[j++];
+			while (*str != ' ' && *str != 0)
+				*ptr++ = *str++;
+			*ptr = 0;
+		}
+		else
+			str++;
+	}
+	array[j] = 0;
+	return (array);
 }
