@@ -11,7 +11,7 @@
 char **strtow(char *str)
 {
 	char **array, *ptr = str;
-	unsigned int i = 0, j = 0;
+	int i = 0, j = 0;
 
 	if (str == 0 || *str == 0)
 		return (0);
