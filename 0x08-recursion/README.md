@@ -10,3 +10,4 @@
 
 4. Returns the value of <code>x</code> raised to the power of <code>y</code>.
 
+5. Returns the natural square root of a number.
